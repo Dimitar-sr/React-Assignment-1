@@ -1,10 +1,10 @@
 import React from 'react';
 
-function UserOutput() {
+function UserOutput(props) {
   return (
     <div>
         <h3>Output Field</h3>
-      <p>Lorem ipsum</p>
+      <p>Username: {props.username}</p>
       <p>Ipsum Lorem</p>
     </div>
   )

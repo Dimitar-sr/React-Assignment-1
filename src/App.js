@@ -5,6 +5,10 @@ import UserInput from './components/UserInput';
 import UserOutput from './components/UserOutput';
 
 class App extends Component {
+  state = {
+    username: 'Dimitar\'s Assignment 1'
+  }
+
   render() {
     return (
       <div className="App">
@@ -15,7 +19,7 @@ class App extends Component {
           </h1>
         </header>
         <UserInput />
-        <UserOutput />
+        <UserOutput username={this.state.username} />
       </div>
     );
   }
