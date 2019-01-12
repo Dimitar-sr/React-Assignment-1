@@ -6,7 +6,13 @@ import UserOutput from './components/UserOutput';
 
 class App extends Component {
   state = {
-    username: 'Dimitar\'s Assignment 1'
+    username: 'Dimitar'
+  }
+
+  changeName = (event) => {
+    this.setState({
+      username: event.target.value
+    })
   }
 
   render() {
@@ -18,7 +24,7 @@ class App extends Component {
             React-Assignment 1
           </h1>
         </header>
-        <UserInput />
+        <UserInput changeName={this.changeName} name={this.state.username}/>
         <UserOutput username={this.state.username} />
       </div>
     );

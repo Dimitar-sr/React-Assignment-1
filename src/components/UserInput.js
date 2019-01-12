@@ -1,14 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class UserInput extends Component {
-  render() {
+function UserInput(props) {
+    const style = {
+        color: 'red',
+        fontStyle: 'italic'
+    }
+
     return (
-      <div>
-          <h3>Input field</h3>
-        <input type='text' />
-      </div>
+        <div>
+            <h3 style={style}>Input field styled with inline CSS</h3>
+            <input onChange={props.changeName} value={props.name} type='text' />
+        </div>
     )
-  }
 }
 
 export default UserInput;
